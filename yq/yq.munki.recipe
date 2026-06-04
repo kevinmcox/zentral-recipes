@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads, packages and installs the latest version of yq, a lightweight and portable command-line YAML processor. yq uses jq like syntax but works with yaml files as well as json. Installs to /usr/local/bin/yq</string>
+    <string>DEPRECATED: This recipe has been replaced by com.github.kevinmcox.munki.yq.
+
+Downloads, packages and installs the latest version of yq, a lightweight and portable command-line YAML processor. yq uses jq like syntax but works with yaml files as well as json. Installs to /usr/local/bin/yq</string>
     <key>Identifier</key>
     <string>com.github.zentralpro.munki.yq</string>
     <key>ParentRecipe</key>
@@ -44,6 +46,15 @@
     </dict>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>This recipe is deprecated. Please use com.github.kevinmcox.munki.yq instead.</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>MunkiImporter</string>
